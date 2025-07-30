@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 210 40% 98%; /* Light foreground text */
+    --card: 222.2 84% 4.9%; /* Dark card background */
+    --card-foreground: 210 40% 98%; /* Light card text */
+    --popover: 222.2 84% 4.9%; /* Dark popover background */
+    --popover-foreground: 210 40% 98%; /* Light popover text */
+    --primary: 140 69.8% 79.2%; /* Mint color for primary (A3F7BF) */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text on mint */
+    --secondary: 217.2 32.6% 17.5%; /* Darker secondary */
+    --secondary-foreground: 210 40% 98%; /* Light text on secondary */
+    --muted: 217.2 32.6% 17.5%; /* Muted dark */
+    --muted-foreground: 215 20.2% 65.1%; /* Muted light text */
+    --accent: 217.2 32.6% 17.5%; /* Accent dark */
+    --accent-foreground: 210 40% 98%; /* Accent light text */
+    --destructive: 0 62.8% 30.6%; /* Red for destructive */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+    --border: 217.2 32.6% 17.5%; /* Dark border */
+    --input: 217.2 32.6% 17.5%; /* Dark input background */
+    --ring: 140 69.8% 79.2%; /* Mint ring focus (A3F7BF) */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 140 69.8% 79.2%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 140 69.8% 79.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+  }
+  /* Add scroll-margin-top to account for fixed header when using anchor links */
+  section[id] {
+    scroll-margin-top: 4rem; /* Adjust this value based on your header's height */
+  }
+}
